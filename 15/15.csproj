@@ -1,0 +1,116 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>_15</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="denchik.jpg" />
+    <None Remove="imgs\1cross.png" />
+    <None Remove="imgs\comm_amul.png" />
+    <None Remove="imgs\comm_axe.png" />
+    <None Remove="imgs\comm_chain.png" />
+    <None Remove="imgs\comm_dagg.png" />
+    <None Remove="imgs\comm_helm.png" />
+    <None Remove="imgs\comm_leather.png" />
+    <None Remove="imgs\comm_mace.png" />
+    <None Remove="imgs\comm_plate.png" />
+    <None Remove="imgs\comm_ring.png" />
+    <None Remove="imgs\comm_robe.png" />
+    <None Remove="imgs\comm_shield.png" />
+    <None Remove="imgs\comm_sword.png" />
+    <None Remove="imgs\comm_wand.png" />
+    <None Remove="imgs\def_amul.png" />
+    <None Remove="imgs\def_ring %284%29.png" />
+    <None Remove="imgs\ench_amul.png" />
+    <None Remove="imgs\ench_axe.png" />
+    <None Remove="imgs\ench_chain.png" />
+    <None Remove="imgs\ench_dag.png" />
+    <None Remove="imgs\ench_helm %281%29.png" />
+    <None Remove="imgs\ench_leather.png" />
+    <None Remove="imgs\ench_mace.png" />
+    <None Remove="imgs\ench_plate.png" />
+    <None Remove="imgs\ench_ring.png" />
+    <None Remove="imgs\ench_robe.png" />
+    <None Remove="imgs\ench_shield.png" />
+    <None Remove="imgs\ench_sword.png" />
+    <None Remove="imgs\ench_wand.png" />
+    <None Remove="imgs\rare_amul.png" />
+    <None Remove="imgs\rare_axe.png" />
+    <None Remove="imgs\rare_chain.png" />
+    <None Remove="imgs\rare_dagg.png" />
+    <None Remove="imgs\rare_helmet.png" />
+    <None Remove="imgs\rare_leather.png" />
+    <None Remove="imgs\rare_mace.png" />
+    <None Remove="imgs\rare_plate.png" />
+    <None Remove="imgs\rare_ring.png" />
+    <None Remove="imgs\rare_robe.png" />
+    <None Remove="imgs\rare_shield.png" />
+    <None Remove="imgs\rare_sword.png" />
+    <None Remove="imgs\rare_wand.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imgs\1cross.png" />
+    <Resource Include="imgs\comm_amul.png" />
+    <Resource Include="imgs\comm_axe.png" />
+    <Resource Include="imgs\comm_chain.png" />
+    <Resource Include="imgs\comm_dagg.png" />
+    <Resource Include="imgs\comm_leather.png" />
+    <Resource Include="imgs\comm_mace.png" />
+    <Resource Include="imgs\comm_plate.png" />
+    <Resource Include="imgs\comm_ring.png" />
+    <Resource Include="imgs\comm_robe.png" />
+    <Resource Include="imgs\comm_shield.png" />
+    <Resource Include="imgs\comm_sword.png" />
+    <Resource Include="imgs\ench_amul.png" />
+    <Resource Include="imgs\ench_axe.png" />
+    <Resource Include="imgs\ench_chain.png" />
+    <Resource Include="imgs\ench_dag.png" />
+    <Resource Include="imgs\ench_leather.png" />
+    <Resource Include="imgs\ench_mace.png" />
+    <Resource Include="imgs\ench_plate.png" />
+    <Resource Include="imgs\ench_ring.png" />
+    <Resource Include="imgs\ench_robe.png" />
+    <Resource Include="imgs\ench_shield.png" />
+    <Resource Include="imgs\ench_sword.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imgs\alvin-wizard.jpg" />
+    <Resource Include="imgs\comm_helm.png" />
+    <Resource Include="imgs\comm_wand.png" />
+    <Resource Include="imgs\def_amul.png" />
+    <Resource Include="imgs\Def_armor.png" />
+    <Resource Include="imgs\Def_helmet %281%29.png" />
+    <Resource Include="imgs\def_ring (4).png" />
+    <Resource Include="imgs\def_shield %283%29.png" />
+    <Resource Include="imgs\denchik.jpg" />
+    <Resource Include="imgs\denis-warrior.jpg" />
+    <Resource Include="imgs\ench_helm (1).png" />
+    <Resource Include="imgs\ench_wand.png" />
+    <Resource Include="imgs\hand1.png" />
+    <Resource Include="imgs\iladr-rogue.png" />
+    <Resource Include="imgs\rare_amul.png" />
+    <Resource Include="imgs\rare_axe.png" />
+    <Resource Include="imgs\rare_chain.png" />
+    <Resource Include="imgs\rare_dagg.png" />
+    <Resource Include="imgs\rare_helmet.png" />
+    <Resource Include="imgs\rare_leather.png" />
+    <Resource Include="imgs\rare_mace.png" />
+    <Resource Include="imgs\rare_plate.png" />
+    <Resource Include="imgs\rare_ring.png" />
+    <Resource Include="imgs\rare_robe.png" />
+    <Resource Include="imgs\rare_shield.png" />
+    <Resource Include="imgs\rare_sword.png" />
+    <Resource Include="imgs\rare_wand.png" />
+    <Resource Include="imgs\stena.jpg" />
+    <Resource Include="imgs\twohandd.png" />
+    <Resource Include="imgs\карта.jpg" />
+  </ItemGroup>
+
+</Project>

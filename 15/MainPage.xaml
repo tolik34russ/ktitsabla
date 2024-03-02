@@ -1,0 +1,39 @@
+﻿<Page x:Class="_15.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_15"        
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainPage">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/imgs/denchik.jpg"/>
+        </Grid.Background>
+        <Canvas>
+            <Button Height="159" Width="792" FontSize="90" FontFamily="Goudy Stout" Background="{x:Null}" Content="Start" BorderBrush="{x:Null}" Foreground="White" Click="start" HorizontalAlignment="Left" Canvas.Left="565" Canvas.Top="558" VerticalAlignment="Center">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Height="57" Width="319" FontSize="20" FontFamily="Goudy Stout" Background="{x:Null}" Content="secret button" BorderBrush="{x:Null}" Foreground="White" Click="Secret" HorizontalAlignment="Left" Canvas.Left="800" Canvas.Top="721" VerticalAlignment="Center">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Canvas>
+
+    </Grid>
+</Page>
