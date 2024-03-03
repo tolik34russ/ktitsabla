@@ -30,7 +30,7 @@
     <None Remove="imgs\ench_axe.png" />
     <None Remove="imgs\ench_chain.png" />
     <None Remove="imgs\ench_dag.png" />
-    <None Remove="imgs\ench_helm %281%29.png" />
+    <None Remove="imgs\ench_helm.png" />
     <None Remove="imgs\ench_leather.png" />
     <None Remove="imgs\ench_mace.png" />
     <None Remove="imgs\ench_plate.png" />
@@ -43,7 +43,7 @@
     <None Remove="imgs\rare_axe.png" />
     <None Remove="imgs\rare_chain.png" />
     <None Remove="imgs\rare_dagg.png" />
-    <None Remove="imgs\rare_helmet.png" />
+    <None Remove="imgs\rare_helm.png" />
     <None Remove="imgs\rare_leather.png" />
     <None Remove="imgs\rare_mace.png" />
     <None Remove="imgs\rare_plate.png" />
@@ -60,6 +60,7 @@
     <Resource Include="imgs\comm_axe.png" />
     <Resource Include="imgs\comm_chain.png" />
     <Resource Include="imgs\comm_dagg.png" />
+    <Resource Include="imgs\comm_helm.png" />
     <Resource Include="imgs\comm_leather.png" />
     <Resource Include="imgs\comm_mace.png" />
     <Resource Include="imgs\comm_plate.png" />
@@ -71,6 +72,7 @@
     <Resource Include="imgs\ench_axe.png" />
     <Resource Include="imgs\ench_chain.png" />
     <Resource Include="imgs\ench_dag.png" />
+    <Resource Include="imgs\ench_helm.png" />
     <Resource Include="imgs\ench_leather.png" />
     <Resource Include="imgs\ench_mace.png" />
     <Resource Include="imgs\ench_plate.png" />
@@ -82,7 +84,6 @@
 
   <ItemGroup>
     <Resource Include="imgs\alvin-wizard.jpg" />
-    <Resource Include="imgs\comm_helm.png" />
     <Resource Include="imgs\comm_wand.png" />
     <Resource Include="imgs\def_amul.png" />
     <Resource Include="imgs\Def_armor.png" />
@@ -91,7 +92,6 @@
     <Resource Include="imgs\def_shield %283%29.png" />
     <Resource Include="imgs\denchik.jpg" />
     <Resource Include="imgs\denis-warrior.jpg" />
-    <Resource Include="imgs\ench_helm (1).png" />
     <Resource Include="imgs\ench_wand.png" />
     <Resource Include="imgs\hand1.png" />
     <Resource Include="imgs\iladr-rogue.png" />
@@ -99,7 +99,7 @@
     <Resource Include="imgs\rare_axe.png" />
     <Resource Include="imgs\rare_chain.png" />
     <Resource Include="imgs\rare_dagg.png" />
-    <Resource Include="imgs\rare_helmet.png" />
+    <Resource Include="imgs\rare_helm.png" />
     <Resource Include="imgs\rare_leather.png" />
     <Resource Include="imgs\rare_mace.png" />
     <Resource Include="imgs\rare_plate.png" />

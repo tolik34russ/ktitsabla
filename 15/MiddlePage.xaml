@@ -94,10 +94,10 @@
                 <TextBlock x:Name="BonusBarCrtD" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Background="#FFA5A5A5" Height="30" Canvas.Left="1291" Canvas.Top="198" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic"/>
             </Canvas>
         </Canvas>
-        <Canvas x:Name="CanvasInventory" Opacity="0.5" Background="#FF171717" Height="1080" Width="1920" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="319,-1306,0,0">
+        <Canvas x:Name="CanvasInventory" Opacity="0.5" Background="#FF171717" Height="1080" Width="1920" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-932,-1190,0,0">
             <Button x:Name="InventoryVIs3" Content="Inventory" Width="244" BorderBrush="Black" FontSize="30" FontFamily="Dungeon" Height="46" Canvas.Left="1578" Canvas.Top="970" Background="{x:Null}" Click="InventoryVIs2_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
-        <Canvas x:Name="InvMain" Height="790" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1220,-1185,0,0">
+        <Canvas x:Name="InvMain" Height="790" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1079,-952,0,0">
             <Canvas Height="790" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#33000000">
                 <ListBox x:Name="WeaponList" Height="297" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" FontFamily="Dungeon" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="72" BorderBrush="{x:Null}" SelectionChanged="WeaponList_SelectionChanged"/>
                 <TextBlock TextWrapping="Wrap" Text="Weapons:" HorizontalAlignment="Left" Canvas.Left="77" Canvas.Top="16" VerticalAlignment="Center" Height="52" Width="233" FontFamily="Dungeon" FontSize="40"/>
@@ -156,58 +156,61 @@
             <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="946" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="826" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="706" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Canvas Height="504" Canvas.Left="459" Canvas.Top="76" Width="990" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="207" Canvas.Top="346" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#33A5A5A5">
-                    <Border x:Name="def_shield" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Canvas Height="504" Canvas.Left="464" Canvas.Top="83" Width="990" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="51" Canvas.Top="376" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#33A5A5A5">
+                    <Border x:Name="def_shield" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="def_shield_MouseLeftButtonDown">
                         <Border.Background>
-                            <ImageBrush ImageSource="/imgs/def_shield (3).png"/>
+                            <ImageBrush/>
                         </Border.Background>
                     </Border>
                 </Border>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="207" Canvas.Top="205" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Border x:Name="def_chesplate" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="52" Canvas.Top="237" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Border x:Name="def_chesplate" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="def_chesplate_MouseLeftButtonDown">
                         <Border.Background>
-                            <ImageBrush ImageSource="/imgs/Def_armor.png"/>
+                            <ImageBrush/>
                         </Border.Background>
                     </Border>
                 </Border>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="207" Canvas.Top="93" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="691" Canvas.Top="205" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="691" Canvas.Top="93" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="691" Canvas.Top="346" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="869" Canvas.Top="346" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="869" Canvas.Top="234" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Border x:Name="def_helmet" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="207" Canvas.Top="93" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="52" Canvas.Top="125" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Border x:Name="def_helmet" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="def_helmet_MouseLeftButtonDown">
+                        <Border.Background>
+                            <ImageBrush/>
+                        </Border.Background>
+                    </Border>
+                </Border>
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="549" Canvas.Top="268" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Border x:Name="def_onehand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="def_onehand_MouseLeftButtonDown">
+                        <Border.Background>
+                            <ImageBrush/>
+                        </Border.Background>
+                        <Border x:Name="none_def_onehand1337" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Border.Background>
+                                <ImageBrush/>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="549" Canvas.Top="376" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="549" Canvas.Top="160" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Border x:Name="def_amul" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="def_amul_MouseLeftButtonDown">
+                        <Border.Background>
+                            <ImageBrush/>
+                        </Border.Background>
+                    </Border>
+                </Border>
+                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="549" Canvas.Top="52" Width="100" Background="#33A5A5A5" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Border x:Name="def_ring" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="def_ring_MouseLeftButtonDown">
+                        <Border.Background>
+                            <ImageBrush/>
+                        </Border.Background>
+                    </Border>
+                </Border>
+                <Border x:Name="def_twohand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="549" Canvas.Top="376" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown">
                     <Border.Background>
-                        <ImageBrush ImageSource="/imgs/Def_helmet (1).png"/>
+                        <ImageBrush/>
                     </Border.Background>
                 </Border>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="691" Canvas.Top="94" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/imgs/hand1.png"/>
-                    </Border.Background>
-                </Border>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="691" Canvas.Top="205" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/imgs/hand1.png"/>
-                    </Border.Background>
-                </Border>
-                <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="691" Canvas.Top="346" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/imgs/twohandd.png"/>
-                    </Border.Background>
-                </Border>
-                <Border x:Name="def_ring" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="869" Canvas.Top="234" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/imgs/def_ring (4).png"/>
-                    </Border.Background>
-                </Border>
-                <Border x:Name="def_amul" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="869" Canvas.Top="346" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border.Background>
-                        <ImageBrush ImageSource="/imgs/def_amul.png"/>
-                    </Border.Background>
-                </Border>
-                <Image x:Name="denis_img" Height="400" Canvas.Left="318" Source="/imgs/denis-warrior.jpg" Stretch="Fill" Canvas.Top="46" Width="350" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:Name="denis_img" Height="400" Canvas.Left="160" Source="/imgs/denis-warrior.jpg" Stretch="Fill" Canvas.Top="76" Width="350" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -217,8 +220,77 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="alvin_img" Height="400" Canvas.Left="318" Source="/imgs/alvin-wizard.jpg" Stretch="Fill" Canvas.Top="46" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Image x:Name="ildar_img" Height="400" Canvas.Left="318" Source="/imgs/iladr-rogue.png" Stretch="Fill" Canvas.Top="46" Width="350" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Image x:Name="alvin_img" Height="400" Canvas.Left="160" Source="/imgs/alvin-wizard.jpg" Stretch="Fill" Canvas.Top="76" Width="350" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Image x:Name="ildar_img" Height="400" Canvas.Left="160" Source="/imgs/iladr-rogue.png" Stretch="Fill" Canvas.Top="76" Width="350" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Border x:Name="none_def_shield1337" BorderThickness="1" Height="100" Width="100" Canvas.Left="238" Canvas.Top="746" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Border x:Name="none_def_twohand1337" BorderThickness="1" Height="100" Canvas.Left="237" Canvas.Top="870" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Border.Background>
+                        <ImageBrush/>
+                    </Border.Background>
+                </Border>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="-18" Canvas.Top="158" Width="102" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Helm." HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="-18" Canvas.Top="411" Width="102" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Shield" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="476" Canvas.Top="192" Width="100" Foreground="White" RenderTransformOrigin="-1.078,16.967" FontStyle="Italic" Text="Amul." HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform X="654.966" Y="-333.054"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="477" Canvas.Top="86" Width="101" Foreground="White" RenderTransformOrigin="-1.078,16.967" FontStyle="Italic" Text="Ring" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform X="654.966" Y="-333.054"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="479" Canvas.Top="303" Width="100" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="1hand" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="476" Canvas.Top="408" Width="100" Foreground="White" RenderTransformOrigin="-1.078,16.967" FontStyle="Italic" Text="2hand" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform X="654.966" Y="-333.054"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="-17" Canvas.Top="271" Width="98" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Chespl." TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform></TextBlock>
             </Canvas>
             <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="84" Canvas.Top="669" Width="100" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Robe" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center">
             </TextBlock>
@@ -380,12 +452,12 @@
             </Border>
             <Border x:Name="ench_helmet" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1664" Canvas.Top="226" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_helmet_MouseLeftButtonDown">
                 <Border.Background>
-                    <ImageBrush ImageSource="/imgs/ench_helm (1).png"/>
+                    <ImageBrush ImageSource="/imgs/ench_helm.png"/>
                 </Border.Background>
             </Border>
             <Border x:Name="rare_helmet" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1664" Canvas.Top="346" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_helmet_MouseLeftButtonDown">
                 <Border.Background>
-                    <ImageBrush ImageSource="/imgs/rare_helmet.png"/>
+                    <ImageBrush ImageSource="/imgs/rare_helm.png"/>
                 </Border.Background>
             </Border>
             <Border x:Name="rare_shield" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1784" Canvas.Top="346" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_shield_MouseLeftButtonDown">
@@ -403,77 +475,77 @@
                     <ImageBrush ImageSource="/imgs/comm_shield.png" Stretch="Uniform"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="rare_wand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="926" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_wand_MouseLeftButtonDown">
+            <Border x:Name="rare_wand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="926" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_wand_MouseLeftButtonDown" MouseRightButtonDown="rare_wand_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/rare_wand.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="ench_wand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="926" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_wand_MouseLeftButtonDown">
+            <Border x:Name="ench_wand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="926" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_wand_MouseLeftButtonDown" MouseRightButtonDown="ench_wand_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/ench_wand.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="comm_wand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="926" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_wand_MouseLeftButtonDown">
+            <Border x:Name="comm_wand" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="926" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_wand_MouseLeftButtonDown" MouseRightButtonDown="comm_wand_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/comm_wand.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="comm_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_dagg_MouseLeftButtonDown">
+            <Border x:Name="comm_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="comm_dagg_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/comm_dagg.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="ench_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_dagg_MouseLeftButtonDown">
+            <Border x:Name="ench_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="ench_dagg_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/ench_dag.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="rare_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_dagg_MouseLeftButtonDown">
+            <Border x:Name="rare_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="rare_dagg_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/rare_dagg.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="rare_sword" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1166" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_sword_MouseLeftButtonDown">
+            <Border x:Name="rare_sword" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1166" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_sword_MouseLeftButtonDown" MouseRightButtonDown="rare_sword_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/rare_sword.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="ench_sword" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1166" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_sword_MouseLeftButtonDown">
+            <Border x:Name="ench_sword" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1166" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_sword_MouseLeftButtonDown" MouseRightButtonDown="ench_sword_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/ench_sword.png" Stretch="Uniform"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="comm_sword" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1166" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_sword_MouseLeftButtonDown">
+            <Border x:Name="comm_sword" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1166" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_sword_MouseLeftButtonDown" MouseRightButtonDown="comm_sword_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/comm_sword.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="comm_axe" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1286" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_axe_MouseLeftButtonDown">
+            <Border x:Name="comm_axe" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1286" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_axe_MouseLeftButtonDown" MouseRightButtonDown="comm_axe_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/comm_axe.png" Stretch="Uniform"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="comm_mace" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_mace_MouseLeftButtonDown">
+            <Border x:Name="comm_mace" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="comm_mace_MouseLeftButtonDown" MouseRightButtonDown="comm_mace_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/comm_mace.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="ench_axe" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1286" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_axe_MouseLeftButtonDown">
+            <Border x:Name="ench_axe" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1286" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_axe_MouseLeftButtonDown" MouseRightButtonDown="ench_axe_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/ench_axe.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="ench_mace" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_mace_MouseLeftButtonDown">
+            <Border x:Name="ench_mace" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ench_mace_MouseLeftButtonDown" MouseRightButtonDown="ench_mace_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/ench_mace.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="rare_axe" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1286" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_axe_MouseLeftButtonDown">
+            <Border x:Name="rare_axe" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1286" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_axe_MouseLeftButtonDown" MouseRightButtonDown="rare_axe_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/rare_axe.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="rare_mace" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_mace_MouseLeftButtonDown">
+            <Border x:Name="rare_mace" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1404" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="rare_mace_MouseLeftButtonDown" MouseRightButtonDown="rare_mace_MouseRightButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/rare_mace.png"/>
                 </Border.Background>
@@ -538,7 +610,7 @@
                     <ImageBrush ImageSource="/imgs/comm_plate.png" Stretch="Uniform"/>
                 </Border.Background>
             </Border>
-            <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="562" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border x:Name="def_none" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="562" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/1cross.png"/>
                 </Border.Background>

@@ -20,6 +20,7 @@ using static System.Net.Mime.MediaTypeNames;
 using _15.Classes.armors;
 using _15.Classes.roditeli;
 using _15.Classes.weapons;
+using System.Security.Policy;
 
 
 namespace _15
@@ -255,6 +256,10 @@ namespace _15
             alvin_img.Visibility = Visibility.Collapsed;
             ildar_img.Visibility = Visibility.Collapsed;
             denis_img.Visibility = Visibility.Collapsed;
+
+            none_def_shield1337.Visibility = Visibility.Collapsed;
+            none_def_twohand1337.Visibility = Visibility.Collapsed;
+            none_def_onehand1337.Visibility = Visibility.Collapsed;
 
             foreach (var a in WeaponsList)
             {
@@ -1209,7 +1214,7 @@ namespace _15
                     EqipentList.Items.Add(WeaponFind.Name);
                     CharactersFind.Equipment.Add(WeaponFind.Name);
 
-                    //пдам ап
+                    //пдам ап pdam up
                     DaggerPdamBuff += 10;
                     CharactersFind.Pdamage += DaggerPdamBuff;
                     PdamageBlock.Text = Convert.ToString(CharactersFind.Pdamage);
@@ -1977,7 +1982,7 @@ namespace _15
 
         /////////////////////////////////////////////////КНОПКИ ИНВЕНТАРЬ///////////////////////////////////////////////////////////// 
 
-        //армор
+        //////////////////////////////////////////////////////////////армор/////////////////////////////////////////////////////////
         private void comm_robe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             ArmorPicsRefresh();
@@ -2061,7 +2066,8 @@ namespace _15
             def_chesplate.Background = comm_leather.Background;
         }
 
-        //кольца
+
+        ////////////////////////////////////////////////////////////////кольца//////////////////////////////////////////////////////
         private void rare_ring_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             RingPicsRefresh();
@@ -2084,7 +2090,8 @@ namespace _15
             def_ring.Background = comm_ring.Background;
         }
 
-        //амулеты
+
+        /////////////////////////////////////////////////////////////////амулеты////////////////////////////////////////////////
         private void comm_amul_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             AmulPicsRefresh();
@@ -2106,7 +2113,8 @@ namespace _15
             def_amul.Background = rare_amul.Background;
         }
 
-        //шлема
+
+        ////////////////////////////////////////////////////////////////шлема/////////////////////////////////////////////////
         private void comm_helmet_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             HelmetPicsRefresh();
@@ -2131,101 +2139,377 @@ namespace _15
         //щиты
         private void comm_shield_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ShieldPicsRefresh();
-            comm_shield.Visibility = Visibility.Collapsed;
-            def_shield.Background = comm_shield.Background;
+            if (def_shield.Background == def_none.Background)
+            {
+                MessageBox.Show("Недоступно");
+            }
+            else
+            {
+                ShieldPicsRefresh();
+                comm_shield.Visibility = Visibility.Collapsed;
+                def_shield.Background = comm_shield.Background;
+            }
         }
 
         private void ench_shield_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ShieldPicsRefresh();
-            ench_shield.Visibility = Visibility.Collapsed;
-            def_shield.Background = ench_shield.Background;
+            if (def_shield.Background == def_none.Background)
+            {
+                MessageBox.Show("Недоступно");
+            }
+            else
+            {
+                ShieldPicsRefresh();
+                ench_shield.Visibility = Visibility.Collapsed;
+                def_shield.Background = ench_shield.Background;
+            }
         }
 
         private void rare_shield_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ShieldPicsRefresh();
-            rare_shield.Visibility = Visibility.Collapsed;
-            def_shield.Background = rare_shield.Background;
+            if (def_shield.Background == def_none.Background)
+            {
+                MessageBox.Show("Недоступно");
+            }
+            else
+            {
+                ShieldPicsRefresh();
+                rare_shield.Visibility = Visibility.Collapsed;
+                def_shield.Background = rare_shield.Background;
+            }
         }
 
-        //оружки
+        ///////////////////////////////////////////////////////////оружки одна рука//////////////////////////////////////////
         private void comm_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            comm_wand.Visibility = Visibility.Collapsed;
+            def_onehand.Background = comm_wand.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void ench_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            ench_wand.Visibility = Visibility.Collapsed;
+            def_onehand.Background = ench_wand.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void rare_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
-        }
-
-        private void comm_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void ench_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void rare_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+            WeaponPicsRefresh();
+            rare_wand.Visibility = Visibility.Collapsed;
+            def_onehand.Background = rare_wand.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
+        } 
 
         private void comm_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            comm_sword.Visibility = Visibility.Collapsed;
+            def_onehand.Background = comm_sword.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void ench_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            ench_sword.Visibility = Visibility.Collapsed;
+            def_onehand.Background = ench_sword.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void rare_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            rare_sword.Visibility = Visibility.Collapsed;
+            def_onehand.Background = rare_sword.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void comm_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            comm_axe.Visibility = Visibility.Collapsed;
+            def_onehand.Background = comm_axe.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void ench_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            ench_axe.Visibility = Visibility.Collapsed;
+            def_onehand.Background = ench_axe.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void rare_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            WeaponPicsRefresh();
+            rare_axe.Visibility = Visibility.Collapsed;
+            def_onehand.Background = rare_axe.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
 
         }
-
         private void comm_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            comm_mace.Visibility = Visibility.Collapsed;
+            def_onehand.Background = comm_mace.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void ench_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            ench_mace.Visibility = Visibility.Collapsed;
+            def_onehand.Background = ench_mace.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
         private void rare_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WeaponPicsRefresh();
+            rare_mace.Visibility = Visibility.Collapsed;
+            def_onehand.Background = rare_mace.Background;
+            def_twohand.Background = def_none.Background;
+            def_shield.Background = none_def_shield1337.Background;
         }
 
+        ///////////////////////////////////////////////////////////////оружки две руки///////////////////////////////////////////////////
+
+        private void comm_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            comm_wand.Visibility = Visibility.Collapsed;
+            def_twohand.Background = comm_wand.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void ench_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            ench_wand.Visibility = Visibility.Collapsed;
+            def_twohand.Background = ench_wand.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void rare_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            rare_wand.Visibility = Visibility.Collapsed;
+            def_twohand.Background = rare_wand.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void comm_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            comm_dagg.Visibility = Visibility.Collapsed;
+            def_twohand.Background = comm_dagg.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void ench_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            ench_dagg.Visibility = Visibility.Collapsed;
+            def_twohand.Background = ench_dagg.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void rare_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            rare_dagg.Visibility = Visibility.Collapsed;
+            def_twohand.Background = rare_dagg.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void comm_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            comm_sword.Visibility = Visibility.Collapsed;
+            def_twohand.Background = comm_sword.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void ench_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            ench_sword.Visibility = Visibility.Collapsed;
+            def_twohand.Background = ench_sword.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void rare_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            rare_sword.Visibility = Visibility.Collapsed;
+            def_twohand.Background = rare_sword.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void comm_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            comm_axe.Visibility = Visibility.Collapsed;
+            def_twohand.Background = comm_axe.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void ench_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            ench_axe.Visibility = Visibility.Collapsed;
+            def_twohand.Background = ench_axe.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void rare_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            rare_axe.Visibility = Visibility.Collapsed;
+            def_twohand.Background = rare_axe.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void comm_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            comm_mace.Visibility = Visibility.Collapsed;
+            def_twohand.Background = comm_mace.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void ench_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            ench_mace.Visibility = Visibility.Collapsed;
+            def_twohand.Background = ench_mace.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+        private void rare_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WeaponPicsRefresh();
+            rare_mace.Visibility = Visibility.Collapsed;
+            def_twohand.Background = rare_mace.Background;
+            def_shield.Background = def_none.Background;
+            def_onehand.Background = def_none.Background;
+            ShieldPicsRefresh();
+        }
+
+
+        //////////////////////////////////////////////////////////УДАЛЕНИЕ//////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////изи///////////////////////////////////////////////////////
+        private void def_helmet_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            def_helmet.Background = none_def_shield1337.Background;
+            HelmetPicsRefresh();
+        }
+
+        private void def_chesplate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            def_chesplate.Background = none_def_shield1337.Background;
+            ArmorPicsRefresh();
+        }
+
+        private void def_ring_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            def_ring.Background = none_def_shield1337.Background;
+            RingPicsRefresh();
+        }
+
+        private void def_amul_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            def_amul.Background = none_def_shield1337.Background;
+            AmulPicsRefresh();
+        }
+
+        //////////////////////////////////////////////////////////неизи/////////////////////////////////////////////////////
+        private void def_shield_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (def_shield.Background == def_none.Background)
+            {
+                MessageBox.Show("Тут и так ничего нету)))");
+            }
+            else
+            {
+                def_shield.Background = none_def_shield1337.Background;
+                ShieldPicsRefresh();
+            }
+        }
+
+        private void def_onehand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (def_onehand.Background == def_none.Background)
+            {
+                MessageBox.Show("Тут и так ничего нету)))");
+            }
+            else
+            {
+                def_onehand.Background = none_def_shield1337.Background;
+                def_twohand.Background = none_def_shield1337.Background;
+                WeaponPicsRefresh(); 
+            }
+        }
+
+        private void def_twohand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (def_twohand.Background == def_none.Background)
+            {
+                MessageBox.Show("Тут и так ничего нету)))");
+            }
+            else
+            {
+                def_twohand.Background = none_def_shield1337.Background;
+                def_onehand.Background = none_def_shield1337.Background;
+                def_shield.Background = none_def_shield1337.Background;
+                WeaponPicsRefresh();
+            }
+        }
     }
 }   
 
