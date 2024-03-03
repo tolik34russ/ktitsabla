@@ -8,7 +8,7 @@ namespace _15.Classes.weapons
 {
     internal class Dagger : Weapon
     {
-        public Dagger() : base("Dagger", 10, 60, 50)
+        public Dagger() : base("Axe", "Dagger", "Sword", 10, 60, 50)
         {
         }
     }

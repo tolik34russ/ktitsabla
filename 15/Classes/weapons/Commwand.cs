@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _15.Classes.weapons
 {
-    internal class Sword : Weapon
+    class Commwand : Weapon
     {
-        public Sword() : base("Axe", "Sword", "Sword", 20, 80, 70)
+        public Commwand() :base("comm_wand", "Wand", "Common", 10, 5, 100)
         {
         }
     }

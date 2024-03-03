@@ -28,7 +28,7 @@ namespace _15
     public partial class MiddlePage : Page
     {
         internal List<Unit> Characters = new List<Unit>() { new Warrior(), new Rogue(), new Wizard() };
-        internal List<Weapon> WeaponsList = new List<Weapon>() { new Axe(), new Dagger(), new Mace(), new Staff(), new Sword() };
+        internal List<Weapon> WeaponsList = new List<Weapon>() { new Commwand()};
         internal List<Armor> ArmorList = new List<Armor>() { new LightHelmet(), new LightСhesplate(), new MiddleHelmet(), new MiddleСhestplate(), new HeavyHelmet(), new HeavyСhesplate() };
 
         public MiddlePage()
@@ -2187,6 +2187,11 @@ namespace _15
             def_onehand.Background = comm_wand.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Id == Convert.ToString(comm_wand.Name));
+            itemnamepic.Background = comm_wand.Background;       
+            Itemname.Text = WeaponFind.Name;
+            Itemrarity.Text = WeaponFind.Rarity;
         }
 
         private void ench_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2510,6 +2515,11 @@ namespace _15
                 WeaponPicsRefresh();
             }
         }
+
+        ///////////////////////////////////////////////////////ПРИБАВКА К СТАТАМ////////////////////////////////////////////
+        
+
+
     }
 }   
 

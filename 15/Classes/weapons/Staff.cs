@@ -8,7 +8,7 @@ namespace _15.Classes.weapons
 {
     internal class Staff : Weapon
     {
-        public Staff() : base("Staff", 50, 20, 20)
+        public Staff() : base("Axe", "Staff", "Sword", 50, 20, 20)
         {
         }
     }
