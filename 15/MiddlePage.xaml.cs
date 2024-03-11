@@ -28,7 +28,7 @@ namespace _15
     public partial class MiddlePage : Page
     {
         internal List<Unit> Characters = new List<Unit>() { new Warrior(), new Rogue(), new Wizard() };
-        internal List<Weapon> WeaponsList = new List<Weapon>() { new Commwand()};
+        internal List<Weapon> WeaponsList = new List<Weapon>() { new Wand(), new Dagger(), new Sword(), new Axe(), new Mace()};
         internal List<Armor> ArmorList = new List<Armor>() { new LightHelmet(), new LightСhesplate(), new MiddleHelmet(), new MiddleСhestplate(), new HeavyHelmet(), new HeavyСhesplate() };
 
         public MiddlePage()
@@ -440,14 +440,15 @@ namespace _15
                     {
                         MessageBox.Show("Нету опыта");
                     }
+
                     ExperienceBlock.Text = Convert.ToString(CharactersFind.Exp);
                     StrenghtBlock.Text = Convert.ToString(CharactersFind.Strenght);
 
                     int a = CharactersFind.Vitality * 2;
                     int b = CharactersFind.Strenght * 1;
                     int c = a + b;
-                    HealthBlock.Text = Convert.ToString(c + MaceHBuff);
-                    PdamageBlock.Text = Convert.ToString(CharactersFind.Strenght * 1 + StaffPdamBuff + DaggerPdamBuff + SwordPdamBuff + AxePdamBuff + MacePdamBuff);
+                    HealthBlock.Text = Convert.ToString(c);
+                    PdamageBlock.Text = Convert.ToString(CharactersFind.Strenght * 1 + StaffPdamBuff);
                 }
                 else if (CharactersFind.Name == "Rogue")
                 {
@@ -485,7 +486,7 @@ namespace _15
                     int a1 = CharactersFind.Strenght * 5 / 10;
                     int b1 = CharactersFind.Dexterity * 5 / 10;
                     int c1 = a1 + b1;
-                    PdamageBlock.Text = Convert.ToString(c1 + StaffPdamBuff + DaggerPdamBuff + SwordPdamBuff + AxePdamBuff + MacePdamBuff);
+                    PdamageBlock.Text = Convert.ToString(c1);
                 }
                 else if (CharactersFind.Name == "Wizard")
                 {
@@ -518,8 +519,8 @@ namespace _15
                     int a = CharactersFind.Vitality * 14 / 10;
                     int b = CharactersFind.Strenght * 2 / 10;
                     int c = a + b;
-                    HealthBlock.Text = Convert.ToString(c + MaceHBuff);
-                    PdamageBlock.Text = Convert.ToString(CharactersFind.Strenght * 5 / 10 + StaffPdamBuff + DaggerPdamBuff + SwordPdamBuff + AxePdamBuff + MacePdamBuff);
+                    HealthBlock.Text = Convert.ToString(c);
+                    PdamageBlock.Text = Convert.ToString(CharactersFind.Strenght * 5 / 10);
                 }
             }
             else
@@ -1978,7 +1979,21 @@ namespace _15
         }
 
 
-
+        void RefrBB()
+        {
+            BonusBarStr.Visibility = Visibility.Collapsed;
+            BonusBarDex.Visibility = Visibility.Collapsed;
+            BonusBarInt.Visibility = Visibility.Collapsed;
+            BonusBarVit.Visibility = Visibility.Collapsed;
+            BonusBarH.Visibility = Visibility.Collapsed;
+            BonusBarM.Visibility = Visibility.Collapsed;
+            BonusBarPdam.Visibility = Visibility.Collapsed;
+            BonusBarArm.Visibility = Visibility.Collapsed;
+            BonusBarMdam.Visibility = Visibility.Collapsed;
+            BonusBarMdef.Visibility = Visibility.Collapsed;
+            BonusBarCrtC.Visibility = Visibility.Collapsed;
+            BonusBarCrtD.Visibility = Visibility.Collapsed;
+        }
 
         /////////////////////////////////////////////////КНОПКИ ИНВЕНТАРЬ///////////////////////////////////////////////////////////// 
 
@@ -2188,10 +2203,20 @@ namespace _15
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
 
-            var WeaponFind = WeaponsList.Find(x => x.Id == Convert.ToString(comm_wand.Name));
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Wand");
             itemnamepic.Background = comm_wand.Background;       
-            Itemname.Text = WeaponFind.Name;
-            Itemrarity.Text = WeaponFind.Rarity;
+            Itemname.Text = "Wand";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+
+            RefrBB();
+
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);  
         }
 
         private void ench_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2201,6 +2226,24 @@ namespace _15
             def_onehand.Background = ench_wand.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Wand");
+            itemnamepic.Background = ench_wand.Background;
+            Itemname.Text = "Wand";
+            Itemrarity.Text = "Ench.";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Mana: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            
+            BonusBarM.Visibility = Visibility.Visible;
+            BonusBarM.Foreground = Brushes.Yellow;
+            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+
         }
 
         private void rare_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2210,7 +2253,50 @@ namespace _15
             def_onehand.Background = rare_wand.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
-        } 
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Wand");
+            itemnamepic.Background = rare_wand.Background;
+            Itemname.Text = "Wand";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Mana: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "Int: +" + Convert.ToString(WeaponFind.Bonus3);
+            _4bonus4.Text = "MagicCrit: +" + Convert.ToString(WeaponFind.Bonus4d1) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d2) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarM.Visibility = Visibility.Visible;
+            BonusBarM.Foreground = Brushes.Yellow;
+            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+
+            BonusBarInt.Visibility = Visibility.Visible;
+            BonusBarInt.Foreground = Brushes.Yellow;
+            BonusBarInt.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
+        }
+
+        private void comm_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Ты не можешь взять даггеры в одну руку");
+        }
+
+        private void ench_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Ты не можешь взять даггеры в одну руку");
+        }
+
+        private void rare_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Ты не можешь взять даггеры в одну руку");
+        }
 
         private void comm_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -2219,6 +2305,19 @@ namespace _15
             def_onehand.Background = comm_sword.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Sword");
+            itemnamepic.Background = comm_sword.Background;
+            Itemname.Text = "Sword";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
         }
 
         private void ench_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2228,6 +2327,23 @@ namespace _15
             def_onehand.Background = ench_sword.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Sword");
+            itemnamepic.Background = ench_sword.Background;
+            Itemname.Text = "Sword";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
         }
 
         private void rare_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2237,6 +2353,35 @@ namespace _15
             def_onehand.Background = rare_sword.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Sword");
+            itemnamepic.Background = rare_sword.Background;
+            Itemname.Text = "Sword";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus3);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d2) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
         }
 
         private void comm_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2246,6 +2391,20 @@ namespace _15
             def_onehand.Background = comm_axe.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Axe");
+            itemnamepic.Background = comm_axe.Background;
+            Itemname.Text = "Axe";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
         }
 
         private void ench_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2255,6 +2414,23 @@ namespace _15
             def_onehand.Background = ench_axe.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Axe");
+            itemnamepic.Background = ench_axe.Background;
+            Itemname.Text = "Axe";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
         }
 
         private void rare_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2265,6 +2441,34 @@ namespace _15
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
 
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Axe");
+            itemnamepic.Background = rare_axe.Background;
+            Itemname.Text = "Axe";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus3);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d2) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
         }
         private void comm_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -2273,6 +2477,19 @@ namespace _15
             def_onehand.Background = comm_mace.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Mace");
+            itemnamepic.Background = comm_mace.Background;
+            Itemname.Text = "Mace";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
         }
 
         private void ench_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2282,6 +2499,23 @@ namespace _15
             def_onehand.Background = ench_mace.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Mace");
+            itemnamepic.Background = ench_mace.Background;
+            Itemname.Text = "Mace";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
         }
 
         private void rare_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2291,6 +2525,35 @@ namespace _15
             def_onehand.Background = rare_mace.Background;
             def_twohand.Background = def_none.Background;
             def_shield.Background = none_def_shield1337.Background;
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Mace");
+            itemnamepic.Background = rare_mace.Background;
+            Itemname.Text = "Mace";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2);
+            _3bonus3.Text = "HP: +" + Convert.ToString(WeaponFind.Bonus3);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d2) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+
+            BonusBarH.Visibility = Visibility.Visible;
+            BonusBarH.Foreground = Brushes.Yellow;
+            BonusBarH.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
         }
 
         ///////////////////////////////////////////////////////////////оружки две руки///////////////////////////////////////////////////
@@ -2303,6 +2566,21 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Wand");
+            itemnamepic.Background = comm_wand.Background;
+            Itemname.Text = "Wand";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+
+            RefrBB();
+
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2313,6 +2591,23 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Wand");
+            itemnamepic.Background = ench_wand.Background;
+            Itemname.Text = "Wand";
+            Itemrarity.Text = "Ench.";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Mana: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarM.Visibility = Visibility.Visible;
+            BonusBarM.Foreground = Brushes.Yellow;
+            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2323,6 +2618,35 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Wand");
+            itemnamepic.Background = rare_wand.Background;
+            Itemname.Text = "Wand";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Mana: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "Int: +" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            _4bonus4.Text = "MagicCrit: +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CD";
+
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarM.Visibility = Visibility.Visible;
+            BonusBarM.Foreground = Brushes.Yellow;
+            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+
+            BonusBarInt.Visibility = Visibility.Visible;
+            BonusBarInt.Foreground = Brushes.Yellow;
+            BonusBarInt.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2334,6 +2658,19 @@ namespace _15
             def_onehand.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Dagger");
+            itemnamepic.Background = comm_dagg.Background;
+            Itemname.Text = "Daggers";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2344,6 +2681,23 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Dagger");
+            itemnamepic.Background = ench_dagg.Background;
+            Itemname.Text = "Daggers";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);          
         }
 
         private void rare_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2354,6 +2708,34 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Dagger");
+            itemnamepic.Background = rare_dagg.Background;
+            Itemname.Text = "Daggers";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "Int: +" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+
+            BonusBarInt.Visibility = Visibility.Visible;
+            BonusBarInt.Foreground = Brushes.Yellow;
+            BonusBarInt.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2364,6 +2746,20 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Sword");
+            itemnamepic.Background = comm_sword.Background;
+            Itemname.Text = "Sword";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2374,6 +2770,24 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Sword");
+            itemnamepic.Background = ench_sword.Background;
+            Itemname.Text = "Sword";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2384,6 +2798,36 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Sword");
+            itemnamepic.Background = rare_sword.Background;
+            Itemname.Text = "Sword";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CD";
+
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2394,6 +2838,20 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Axe");
+            itemnamepic.Background = comm_axe.Background;
+            Itemname.Text = "Axe";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2404,6 +2862,24 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Axe");
+            itemnamepic.Background = ench_axe.Background;
+            Itemname.Text = "Axe";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2414,6 +2890,35 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Axe");
+            itemnamepic.Background = rare_axe.Background;
+            Itemname.Text = "Axe";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "Dex: +" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+
+            BonusBarDex.Visibility = Visibility.Visible;
+            BonusBarDex.Foreground = Brushes.Yellow;
+            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2424,6 +2929,20 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Mace");
+            itemnamepic.Background = comm_mace.Background;
+            Itemname.Text = "Mace";
+            Itemrarity.Text = "Common";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "None";
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2434,6 +2953,23 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Mace");
+            itemnamepic.Background = ench_mace.Background;
+            Itemname.Text = "Mace";
+            Itemrarity.Text = "Ench";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "None";
+            _4bonus4.Text = "None";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2444,6 +2980,35 @@ namespace _15
             def_shield.Background = def_none.Background;
             def_onehand.Background = def_none.Background;
             ShieldPicsRefresh();
+
+            var WeaponFind = WeaponsList.Find(x => x.Name == "Mace");
+            itemnamepic.Background = rare_mace.Background;
+            Itemname.Text = "Mace";
+            Itemrarity.Text = "Rare";
+            _1bonus1.Text = "Pdamage: +" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            _2bonus2.Text = "Str: +" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            _3bonus3.Text = "HP: +" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            _4bonus4.Text = "MeleeCrit: +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CC, +" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10) + " CD";
+            RefrBB();
+            BonusBarPdam.Visibility = Visibility.Visible;
+            BonusBarPdam.Foreground = Brushes.Yellow;
+            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+
+            BonusBarStr.Visibility = Visibility.Visible;
+            BonusBarStr.Foreground = Brushes.Yellow;
+            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+
+            BonusBarH.Visibility = Visibility.Visible;
+            BonusBarH.Foreground = Brushes.Yellow;
+            BonusBarH.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+
+            BonusBarCrtC.Visibility = Visibility.Visible;
+            BonusBarCrtC.Foreground = Brushes.Yellow;
+            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+
+            BonusBarCrtD.Visibility = Visibility.Visible;
+            BonusBarCrtD.Foreground = Brushes.Yellow;
+            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
 

@@ -8,7 +8,7 @@ namespace _15.Classes.weapons
 {
     internal class Sword : Weapon
     {
-        public Sword() : base("Axe", "Sword", "Sword", 20, 80, 70)
+        public Sword() : base("Sword", 20, 30, 20, 35, 100)
         {
         }
     }

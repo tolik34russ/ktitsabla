@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace _15.Classes.weapons
 {
-    class Commwand : Weapon
+    internal class Wand : Weapon
     {
-        public Commwand() :base("comm_wand", "Wand", "Common", 10, 5, 100)
+        public Wand() : base("Wand", 10, 25, 50, 5, 300)
         {
+
         }
     }
 }

@@ -8,7 +8,7 @@ namespace _15.Classes.weapons
 {
     internal class Mace : Weapon
     {
-        public Mace() : base("Axe", "Mace", "Sword", 40, 10, 100)
+        public Mace() : base("Mace", 40, 20, 40, 10, 250)
         {
         }
     }

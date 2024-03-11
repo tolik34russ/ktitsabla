@@ -297,10 +297,10 @@
                     <TextBlock x:Name="_2bonus" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="7" Canvas.Top="299" Width="145" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="2bonus" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     <TextBlock x:Name="_3bonus" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="7" Canvas.Top="339" Width="145" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="3bonus" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     <TextBlock x:Name="_4bonus" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="7" Canvas.Top="385" Width="145" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="4bonus" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="_1bonus1" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="173" Canvas.Top="257" Width="110" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Top" Text=".........."/>
-                    <TextBlock x:Name="_2bonus2" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="173" Canvas.Top="299" Width="110" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text=".........." HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="_3bonus3" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="173" Canvas.Top="339" Width="110" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text=".........." HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="_4bonus4" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="173" Canvas.Top="385" Width="110" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text=".........." HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="_1bonus1" TextWrapping="Wrap" FontFamily="Dungeon" Height="30" Canvas.Left="154" Canvas.Top="258" Width="130" Foreground="#FFFFEA00" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14"/>
+                    <TextBlock x:Name="_2bonus2" TextWrapping="Wrap" FontSize="14" FontFamily="Dungeon" Height="30" Canvas.Left="154" Canvas.Top="299" Width="129" Foreground="#FFFFEA00" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="_3bonus3" TextWrapping="Wrap" FontSize="14" FontFamily="Dungeon" Height="30" Canvas.Left="154" Canvas.Top="339" Width="129" Foreground="#FFFFEA00" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="_4bonus4" TextWrapping="Wrap" FontSize="14" FontFamily="Dungeon" Height="30" Canvas.Left="154" Canvas.Top="385" Width="129" Foreground="#FFFFEA00" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     <Border x:Name="itemnamepic" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Left="68" Canvas.Top="94" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="10" Canvas.Top="52" Width="110" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Rarity" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     <TextBlock x:Name="Itemname" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="134" Canvas.Top="12" Width="143" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center" Text="..."/>
@@ -505,17 +505,17 @@
                     <ImageBrush ImageSource="/imgs/comm_wand.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="comm_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="comm_dagg_MouseRightButtonDown">
+            <Border x:Name="comm_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="706" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="comm_dagg_MouseRightButtonDown" MouseLeftButtonDown="comm_dagg_MouseLeftButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/comm_dagg.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="ench_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="ench_dagg_MouseRightButtonDown">
+            <Border x:Name="ench_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="826" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="ench_dagg_MouseRightButtonDown" MouseLeftButtonDown="ench_dagg_MouseLeftButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/ench_dag.png"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="rare_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="rare_dagg_MouseRightButtonDown">
+            <Border x:Name="rare_dagg" BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="1046" Canvas.Top="946" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" MouseRightButtonDown="rare_dagg_MouseRightButtonDown" MouseLeftButtonDown="rare_dagg_MouseLeftButtonDown">
                 <Border.Background>
                     <ImageBrush ImageSource="/imgs/rare_dagg.png"/>
                 </Border.Background>
