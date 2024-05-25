@@ -12,7 +12,6 @@
 
     <Grid Background="White">
         <Canvas Margin="0,-2,0,0" Grid.ColumnSpan="2">
-            <Image Height="790" Canvas.Left="520" Source="/imgs/карта.jpg" Stretch="Fill" Canvas.Top="2" Width="1400" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Canvas Height="790" Width="520" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="2">
                 <Canvas.Background>
                     <ImageBrush ImageSource="/imgs/stena.jpg"/>
@@ -93,11 +92,125 @@
                 <TextBlock x:Name="BonusBarCrtC" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Background="#FFA5A5A5" Height="30" Canvas.Left="1291" Canvas.Top="152" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic"/>
                 <TextBlock x:Name="BonusBarCrtD" TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Background="#FFA5A5A5" Height="30" Canvas.Left="1291" Canvas.Top="198" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic"/>
             </Canvas>
+            <Canvas Height="790" Canvas.Left="520" Canvas.Top="2" Width="1400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/imgs/romashki.png"/>
+                </Canvas.Background>
+                <Canvas Height="790" Width="1400" Background="#B2000000" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <TextBlock Canvas.Left="250" TextWrapping="Wrap" Text="You:" Canvas.Top="88" Height="37" Width="140" FontFamily="Copperplate Gothic Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="30"/>
+                    <TextBlock Canvas.Left="952" TextWrapping="Wrap" Text="Enemy:" Canvas.Top="88" Height="37" Width="144" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Right"/>
+                    <TextBlock x:Name="YouBlock" Canvas.Left="250" TextWrapping="Wrap" Canvas.Top="136" Height="37" Width="401" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="EnBlock" Canvas.Left="696" TextWrapping="Wrap" Canvas.Top="135" Height="37" Width="400" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="30" TextAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="1103" Canvas.Top="608" Width="56" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Legs" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="1101" Canvas.Top="458" Width="60" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Arms" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="1101" Canvas.Top="306" Width="60" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Body" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="1099" Canvas.Top="151" Width="64" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Head" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="191" Canvas.Top="609" Width="56" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Legs" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-269.72"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="189" Canvas.Top="459" Width="60" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Arms" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-269.713"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="189" Canvas.Top="307" Width="60" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Body" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-269.777"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="25" FontFamily="Dungeon" Height="30" Canvas.Left="187" Canvas.Top="151" Width="64" Foreground="White" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" Text="Head" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="90.108"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform></TextBlock>
+                    <TextBlock x:Name="BoiHp" Canvas.Left="250" TextWrapping="Wrap" Canvas.Top="178" Height="32" Width="60" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Top" Text="HP:"/>
+                    <TextBlock x:Name="BoiHp_Copy" Canvas.Left="250" TextWrapping="Wrap" Canvas.Top="215" Height="32" Width="60" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" Text="MP:" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="YouHp" Canvas.Left="312" TextWrapping="Wrap" Canvas.Top="178" Height="32" Width="100" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="YouMp" Canvas.Left="312" TextWrapping="Wrap" Canvas.Top="215" Height="32" Width="100" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="BoiHp_Copy1" Canvas.Left="934" TextWrapping="Wrap" Canvas.Top="178" Height="32" Width="60" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" Text="HP:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="BoiHp_Copy2" Canvas.Left="934" TextWrapping="Wrap" Canvas.Top="215" Height="32" Width="60" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" Text="MP:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="EnHp" Canvas.Left="996" TextWrapping="Wrap" Canvas.Top="178" Height="32" Width="100" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="EnMp" Canvas.Left="996" TextWrapping="Wrap" Canvas.Top="215" Height="32" Width="100" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Border x:Name="BoiHead_Copy7" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="88" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="50" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="243" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="50" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy1" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="398" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="50" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy2" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="553" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="50" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy3" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="88" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="1150" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy4" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="243" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="1150" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy5" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="398" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="1150" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiHead_Copy6" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="553" Width="150" MouseLeftButtonDown="def_twohand_MouseLeftButtonDown" Canvas.Left="1150" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5"/>
+                    <Border x:Name="BoiYouHead" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="88" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="50"/>
+                    <Border x:Name="BoiYouBody" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="243" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="50"/>
+                    <Border x:Name="BoiYouArms" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="398" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="50"/>
+                    <Border x:Name="BoiYouLegs" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Top="553" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="50"/>
+                    <Border x:Name="BoiEnHead" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Left="1150" Canvas.Top="88" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Border x:Name="BoiEnBody" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Left="1150" Canvas.Top="243" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Border x:Name="BoiEnArms" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Left="1150" Canvas.Top="398" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Border x:Name="BoiEnLegs" BorderBrush="#FFABADB3" BorderThickness="1" Height="150" Canvas.Left="1150" Canvas.Top="553" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Button x:Name="StartBoi" Content="Start" Height="62" Canvas.Left="588" Canvas.Top="685" Width="180" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Copperplate Gothic Bold" FontSize="50" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="StartBoi_Click"/>
+                    <Button x:Name="StopBoi" Content="Stop" Height="62" Canvas.Left="588" Canvas.Top="611" Width="180" FontFamily="Copperplate Gothic Bold" FontSize="50" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" Click="StopBoi_Click"/>
+                    <TextBlock Canvas.Left="403" TextWrapping="Wrap" Text="Текст" Canvas.Top="25" Height="100" Width="528" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center"/>
+                    <Button x:Name="BlockYou_b" Content="Block" Height="35" Canvas.Left="250" Canvas.Top="258" Width="133" FontFamily="Copperplate Gothic Bold" FontSize="30" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BlockYou_b_Click"/>
+                    <Button x:Name="AttackYou_b" Content="Attack" Height="35" Canvas.Left="250" Canvas.Top="301" Width="133" FontFamily="Copperplate Gothic Bold" FontSize="30" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AttackYou_b_Click"/>
+                    <Button x:Name="AttackEn_b1" Content="Block" Height="36" Canvas.Left="964" Canvas.Top="259" Width="133" FontFamily="Copperplate Gothic Bold" FontSize="30" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AttackEn_b1_Click"/>
+                    <Button x:Name="AttackEn_b" Content="Attack" Height="36" Canvas.Left="965" Canvas.Top="303" Width="132" FontFamily="Copperplate Gothic Bold" FontSize="30" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AttackEn_b_Click"/>
+                </Canvas>
+            </Canvas>
         </Canvas>
-        <Canvas x:Name="CanvasInventory" Opacity="0.5" Background="#FF171717" Height="1080" Width="1920" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-932,-1190,0,0">
+        <Canvas x:Name="CanvasInventory" Opacity="0.5" Background="#FF171717" Height="1080" Width="1920" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-788,-1574,0,0">
             <Button x:Name="InventoryVIs3" Content="Inventory" Width="244" BorderBrush="Black" FontSize="30" FontFamily="Dungeon" Height="46" Canvas.Left="1578" Canvas.Top="970" Background="{x:Null}" Click="InventoryVIs2_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
-        <Canvas x:Name="InvMain" Height="790" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1079,-952,0,0">
+        <Canvas x:Name="InvMain" Height="790" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1219,-1292,0,0">
             <Canvas Height="790" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#33000000">
                 <ListBox x:Name="WeaponList" Height="297" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" FontFamily="Dungeon" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="72" BorderBrush="{x:Null}" SelectionChanged="WeaponList_SelectionChanged"/>
                 <TextBlock TextWrapping="Wrap" Text="Weapons:" HorizontalAlignment="Left" Canvas.Left="77" Canvas.Top="16" VerticalAlignment="Center" Height="52" Width="233" FontFamily="Dungeon" FontSize="40"/>
@@ -109,7 +222,7 @@
                 <ListBox x:Name="EqipentList" Height="670" Width="400" d:ItemsSource="{d:SampleData ItemCount=15}" Background="{x:Null}" FontFamily="Dungeon" FontSize="30" Canvas.Top="80" BorderBrush="{x:Null}" Canvas.Left="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             </Canvas>
         </Canvas>
-        <Canvas x:Name="CanvasInventory213123" Background="#CC000000" Height="1080" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Canvas x:Name="CanvasInventory213123" Background="#CC000000" Height="1080" Width="1920" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-2010,3,0,0">
             <Button x:Name="InventoryVIs2" Content="Inventory" Width="244" BorderBrush="#FFABADB3" FontSize="30" FontFamily="Dungeon" Height="46" Canvas.Left="1578" Canvas.Top="970" Click="InventoryVIs2_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#33A5A5A5" FontStyle="Italic"/>
 
             <Border BorderBrush="#FFABADB3" BorderThickness="1" Height="100" Canvas.Left="84" Canvas.Top="346" Width="100" Background="#33A5A5A5" HorizontalAlignment="Center" VerticalAlignment="Top"/>

@@ -270,6 +270,9 @@ namespace _15
                 ArmorssList.Items.Add(a.Name);
             }
             ClearBonuses();
+            
+            StopBoi.Visibility = Visibility.Collapsed;
+            invSt();
         }
         void WarB()
         {
@@ -1313,7 +1316,7 @@ namespace _15
                     HealthBlock.Text = Convert.ToString(CharactersFind.Health);
                     BonusBarH.Visibility = Visibility.Visible;
                     BonusBarH.Foreground = Brushes.Yellow;
-                    BonusBarH.Text = "+30";
+                    BonusBarH.Text = "30";
 
                     //сс ап
                     MaceCrtCBuff += 10;
@@ -1351,7 +1354,7 @@ namespace _15
 
                     BonusBarM.Visibility = Visibility.Visible;
                     BonusBarM.Foreground = Brushes.Yellow;
-                    BonusBarM.Text = "+100";
+                    BonusBarM.Text = "100";
 
                     //инт ап
                     StaffIntBuff += 50;
@@ -1533,7 +1536,7 @@ namespace _15
                     HealthBlock.Text = Convert.ToString(CharactersFind.Health);
                     BonusBarH.Visibility = Visibility.Visible;
                     BonusBarH.Foreground = Brushes.Yellow;
-                    BonusBarH.Text = "+30";
+                    BonusBarH.Text = "30";
 
                     //сс ап
                     MaceCrtCBuff += 10;
@@ -1571,7 +1574,7 @@ namespace _15
 
                     BonusBarM.Visibility = Visibility.Visible;
                     BonusBarM.Foreground = Brushes.Yellow;
-                    BonusBarM.Text = "+100";
+                    BonusBarM.Text = "100";
 
                     //инт ап
                     StaffIntBuff += 50;
@@ -1753,7 +1756,7 @@ namespace _15
                     HealthBlock.Text = Convert.ToString(CharactersFind.Health);
                     BonusBarH.Visibility = Visibility.Visible;
                     BonusBarH.Foreground = Brushes.Yellow;
-                    BonusBarH.Text = "+30";
+                    BonusBarH.Text = "30";
 
                     //сс ап
                     MaceCrtCBuff += 10;
@@ -1791,7 +1794,7 @@ namespace _15
 
                     BonusBarM.Visibility = Visibility.Visible;
                     BonusBarM.Foreground = Brushes.Yellow;
-                    BonusBarM.Text = "+100";
+                    BonusBarM.Text = "100";
 
                     //инт ап
                     StaffIntBuff += 50;
@@ -2216,7 +2219,7 @@ namespace _15
 
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);  
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);  
         }
 
         private void ench_wand_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2238,11 +2241,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
             
             BonusBarM.Visibility = Visibility.Visible;
             BonusBarM.Foreground = Brushes.Yellow;
-            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarM.Text = Convert.ToString(WeaponFind.Bonus2);
 
         }
 
@@ -2265,22 +2268,22 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarM.Visibility = Visibility.Visible;
             BonusBarM.Foreground = Brushes.Yellow;
-            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarM.Text = Convert.ToString(WeaponFind.Bonus2);
 
             BonusBarInt.Visibility = Visibility.Visible;
             BonusBarInt.Foreground = Brushes.Yellow;
-            BonusBarInt.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+            BonusBarInt.Text = Convert.ToString(WeaponFind.Bonus3);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+            BonusBarCrtC.Text = Convert.ToString(WeaponFind.Bonus4d1);
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2);
         }
 
         private void comm_dagg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2317,7 +2320,7 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
         }
 
         private void ench_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2339,11 +2342,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarDex.Text = Convert.ToString(WeaponFind.Bonus2);
         }
 
         private void rare_sword_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2365,23 +2368,23 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarDex.Text = Convert.ToString(WeaponFind.Bonus2);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+            BonusBarStr.Text = Convert.ToString(WeaponFind.Bonus3);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+            BonusBarCrtC.Text =  Convert.ToString(WeaponFind.Bonus4d1);
 
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
+            BonusBarCrtD.Text = Convert.ToString(WeaponFind.Bonus4d2);
         }
 
         private void comm_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2404,7 +2407,7 @@ namespace _15
 
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1);
         }
 
         private void ench_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2426,11 +2429,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarStr.Text =  Convert.ToString(WeaponFind.Bonus2);
         }
 
         private void rare_axe_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2452,23 +2455,23 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarStr.Text =  Convert.ToString(WeaponFind.Bonus2);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+            BonusBarDex.Text =  Convert.ToString(WeaponFind.Bonus3);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+            BonusBarCrtC.Text = Convert.ToString(WeaponFind.Bonus4d1);
 
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2);
         }
         private void comm_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -2489,7 +2492,7 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
         }
 
         private void ench_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2511,11 +2514,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarStr.Text = Convert.ToString(WeaponFind.Bonus2);
         }
 
         private void rare_mace_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -2537,23 +2540,23 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2);
+            BonusBarStr.Text =  Convert.ToString(WeaponFind.Bonus2);
 
             BonusBarH.Visibility = Visibility.Visible;
             BonusBarH.Foreground = Brushes.Yellow;
-            BonusBarH.Text = "+" + Convert.ToString(WeaponFind.Bonus3);
+            BonusBarH.Text =  Convert.ToString(WeaponFind.Bonus3);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1);
+            BonusBarCrtC.Text =  Convert.ToString(WeaponFind.Bonus4d1);
 
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2);
         }
 
         ///////////////////////////////////////////////////////////////оружки две руки///////////////////////////////////////////////////
@@ -2580,7 +2583,7 @@ namespace _15
 
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2603,11 +2606,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarM.Visibility = Visibility.Visible;
             BonusBarM.Foreground = Brushes.Yellow;
-            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarM.Text =  Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_wand_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2631,22 +2634,22 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarM.Visibility = Visibility.Visible;
             BonusBarM.Foreground = Brushes.Yellow;
-            BonusBarM.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarM.Text =  Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
 
             BonusBarInt.Visibility = Visibility.Visible;
             BonusBarInt.Foreground = Brushes.Yellow;
-            BonusBarInt.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            BonusBarInt.Text =  Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtC.Text =  Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2670,8 +2673,9 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
+
 
         private void ench_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -2693,11 +2697,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);          
+            BonusBarDex.Text =  Convert.ToString(WeaponFind.Bonus2 * 17 / 10);          
         }
 
         private void rare_dagg_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2720,23 +2724,25 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarDex.Text =  Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
 
             BonusBarInt.Visibility = Visibility.Visible;
             BonusBarInt.Foreground = Brushes.Yellow;
-            BonusBarInt.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            BonusBarInt.Text =  Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtC.Text =  Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
+
+
 
         private void comm_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -2759,8 +2765,9 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
+
 
         private void ench_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -2783,11 +2790,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarDex.Text =  Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_sword_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2811,23 +2818,23 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarDex.Text = Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            BonusBarStr.Text =  Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtC.Text = Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
 
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
+            BonusBarCrtD.Text = Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2851,7 +2858,7 @@ namespace _15
 
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2875,11 +2882,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text =  Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarStr.Text = Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_axe_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2902,23 +2909,23 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarStr.Text = Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
 
             BonusBarDex.Visibility = Visibility.Visible;
             BonusBarDex.Foreground = Brushes.Yellow;
-            BonusBarDex.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            BonusBarDex.Text = Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtC.Text = Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
 
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
         private void comm_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2942,7 +2949,7 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
         }
 
         private void ench_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2965,11 +2972,11 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarStr.Text = Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
         }
 
         private void rare_mace_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -2992,23 +2999,23 @@ namespace _15
             RefrBB();
             BonusBarPdam.Visibility = Visibility.Visible;
             BonusBarPdam.Foreground = Brushes.Yellow;
-            BonusBarPdam.Text = "+" + Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
+            BonusBarPdam.Text = Convert.ToString(WeaponFind.Bonus1 * 17 / 10);
 
             BonusBarStr.Visibility = Visibility.Visible;
             BonusBarStr.Foreground = Brushes.Yellow;
-            BonusBarStr.Text = "+" + Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
+            BonusBarStr.Text =  Convert.ToString(WeaponFind.Bonus2 * 17 / 10);
 
             BonusBarH.Visibility = Visibility.Visible;
             BonusBarH.Foreground = Brushes.Yellow;
-            BonusBarH.Text = "+" + Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
+            BonusBarH.Text =  Convert.ToString(WeaponFind.Bonus3 * 17 / 10);
 
             BonusBarCrtC.Visibility = Visibility.Visible;
             BonusBarCrtC.Foreground = Brushes.Yellow;
-            BonusBarCrtC.Text = "+" + Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
+            BonusBarCrtC.Text =  Convert.ToString(WeaponFind.Bonus4d1 * 17 / 10);
 
             BonusBarCrtD.Visibility = Visibility.Visible;
             BonusBarCrtD.Foreground = Brushes.Yellow;
-            BonusBarCrtD.Text = "+" + Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
+            BonusBarCrtD.Text =  Convert.ToString(WeaponFind.Bonus4d2 * 17 / 10);
         }
 
 
@@ -3082,8 +3089,103 @@ namespace _15
         }
 
         ///////////////////////////////////////////////////////ПРИБАВКА К СТАТАМ////////////////////////////////////////////
-        
 
+
+        ///////////////////////////////////////////////////////Боевка///////////////////////////////////////////////////////
+
+        
+        void ClrBoi()
+        {
+            BoiYouHead.Background = none_def_shield1337.Background;
+            BoiYouBody.Background = none_def_shield1337.Background;
+            BoiYouArms.Background = none_def_shield1337.Background;
+            BoiYouLegs.Background = none_def_shield1337.Background;
+            YouBlock.Text = "";
+            YouHp.Text = "";
+            YouMp.Text = "";
+
+            BoiEnHead.Background = none_def_shield1337.Background;
+            BoiEnBody.Background = none_def_shield1337.Background;
+            BoiEnArms.Background = none_def_shield1337.Background;
+            BoiEnLegs.Background = none_def_shield1337.Background;
+            EnBlock.Text = "";
+            EnHp.Text = "";
+            EnMp.Text = "";
+        }
+
+        void invSt()
+        {
+            BoiYouHead.Visibility = Visibility.Collapsed;
+            BoiYouBody.Visibility = Visibility.Collapsed;
+            BoiYouArms.Visibility = Visibility.Collapsed;
+            BoiYouLegs.Visibility = Visibility.Collapsed;
+            BoiEnHead.Visibility = Visibility.Collapsed;
+            BoiEnBody.Visibility = Visibility.Collapsed;
+            BoiEnArms.Visibility = Visibility.Collapsed;
+            BoiEnLegs.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void StopBoi_Click(object sender, RoutedEventArgs e)
+        {
+            StartBoi.Visibility = Visibility.Visible;
+            StopBoi.Visibility = Visibility.Collapsed;
+            ClrBoi();
+        }
+
+        private void StartBoi_Click(object sender, RoutedEventArgs e)
+        {
+            StartBoi.Visibility = Visibility.Collapsed;
+            StopBoi.Visibility = Visibility.Visible;
+
+            if (BonusBarH.Text != "")
+            {
+                int a = Convert.ToInt32(HealthBlock.Text) + Convert.ToInt32(BonusBarH.Text);
+                YouHp.Text = Convert.ToString(a);
+            }
+            else
+            {
+                int a = Convert.ToInt32(HealthBlock.Text);
+                YouHp.Text = Convert.ToString(a);
+            }
+
+            if (BonusBarM.Text != "")
+            {
+                int b = Convert.ToInt32(ManaBlock.Text) + Convert.ToInt32(BonusBarM.Text) ;
+                YouMp.Text = Convert.ToString(b);
+            }
+            else
+            {
+                int b = Convert.ToInt32(ManaBlock.Text);
+                YouMp.Text = Convert.ToString(b);
+            }
+            YouBlock.Text = NameXS.Text;
+
+            
+        }
+
+        private void BlockYou_b_Click(object sender, RoutedEventArgs e)
+        {
+            BoiYouHead.Visibility = Visibility.Visible;
+            BoiYouBody.Visibility = Visibility.Visible;
+            BoiYouArms.Visibility = Visibility.Visible;
+            BoiYouLegs.Visibility = Visibility.Visible;
+        }
+
+        private void AttackYou_b_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AttackEn_b1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AttackEn_b_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
     }
 }   
